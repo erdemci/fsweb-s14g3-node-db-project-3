@@ -117,6 +117,14 @@ async function findById(scheme_id) { // Egzersiz B
   if(!filteredData[0].step_id)
     return responseData;
 
+  /*filteredData.forEach(item => {
+    let stepModel = {
+      step_id:item.step_id,
+      step_number:item.step_number,
+      instructions : item.instructions
+    }
+    responseData.steps.push(stepModel);
+  });*/
   for (let i = 0; i < filteredData.length; i++) {
     const item = filteredData[i];
     let stepModel = {
